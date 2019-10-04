@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A40E33D023472D48009515B6 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40E33CF23472D48009515B6 /* ViewController2.swift */; };
 		A4638A202335F19F0071A2AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4638A1F2335F19F0071A2AF /* AppDelegate.swift */; };
 		A4638A222335F19F0071A2AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4638A212335F19F0071A2AF /* ViewController.swift */; };
 		A4638A252335F19F0071A2AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4638A232335F19F0071A2AF /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A40E33CF23472D48009515B6 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		A4638A1C2335F19F0071A2AF /* 1-1-4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "1-1-4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4638A1F2335F19F0071A2AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4638A212335F19F0071A2AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				A4638A1F2335F19F0071A2AF /* AppDelegate.swift */,
 				A4638A212335F19F0071A2AF /* ViewController.swift */,
+				A40E33CF23472D48009515B6 /* ViewController2.swift */,
 				A4638A232335F19F0071A2AF /* Main.storyboard */,
 				A4638A262335F1A10071A2AF /* Assets.xcassets */,
 				A4638A282335F1A10071A2AF /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				A4638A222335F19F0071A2AF /* ViewController.swift in Sources */,
 				A4638A202335F19F0071A2AF /* AppDelegate.swift in Sources */,
+				A40E33D023472D48009515B6 /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
