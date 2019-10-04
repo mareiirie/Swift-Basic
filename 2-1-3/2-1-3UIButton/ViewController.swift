@@ -10,18 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var img1 = UIImage(named:"UNADJUSTEDNONRAW_thumb_1ef")!
-    var img2 = UIImage(named:"UNADJUSTEDNONRAW_thumb_1f0")!
-    var img3 = UIImage(named:"UNADJUSTEDNONRAW_thumb_1f1")!
-    var img4 = UIImage(named:"UNADJUSTEDNONRAW_thumb_1f2")!
-    var img5 = UIImage(named:"UNADJUSTEDNONRAW_thumb_1f3")!
+    let img1 = UIImage(named:"UNADJUSTEDNONRAW_thumb_1ef")
+    let img2 = UIImage(named:"UNADJUSTEDNONRAW_thumb_1f0")
+    let img3 = UIImage(named:"UNADJUSTEDNONRAW_thumb_1f1")
+    let img4 = UIImage(named:"UNADJUSTEDNONRAW_thumb_1f2")
+    let img5 = UIImage(named:"UNADJUSTEDNONRAW_thumb_1f3")
 
     
     
     @IBOutlet weak var image1: UIImageView!
 
     
-    @IBAction func button1(_ sender: Any) {
+    @IBAction func button1(_ sender: UIButton) {
         let random = arc4random() % 10
         print(random)
         if ( random > 8 ) {
