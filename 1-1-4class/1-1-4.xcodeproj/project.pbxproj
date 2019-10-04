@@ -77,9 +77,9 @@
 		A4638A132335F19F0071A2AF = {
 			isa = PBXGroup;
 			children = (
-				A4638A1E2335F19F0071A2AF /* クラスプロパティメソッド */,
-				A4638A332335F1A10071A2AF /* クラスプロパティメソッドTests */,
-				A4638A3E2335F1A10071A2AF /* クラスプロパティメソッドUITests */,
+				A4638A1E2335F19F0071A2AF /* classpropatymethod */,
+				A4638A332335F1A10071A2AF /* classpropatymethodTests */,
+				A4638A3E2335F1A10071A2AF /* classpropatymethodUITests */,
 				A4638A1D2335F19F0071A2AF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,7 +94,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A4638A1E2335F19F0071A2AF /* クラスプロパティメソッド */ = {
+		A4638A1E2335F19F0071A2AF /* classpropatymethod */ = {
 			isa = PBXGroup;
 			children = (
 				A4638A1F2335F19F0071A2AF /* AppDelegate.swift */,
@@ -104,25 +104,25 @@
 				A4638A282335F1A10071A2AF /* LaunchScreen.storyboard */,
 				A4638A2B2335F1A10071A2AF /* Info.plist */,
 			);
-			path = "クラスプロパティメソッド";
+			path = classpropatymethod;
 			sourceTree = "<group>";
 		};
-		A4638A332335F1A10071A2AF /* クラスプロパティメソッドTests */ = {
+		A4638A332335F1A10071A2AF /* classpropatymethodTests */ = {
 			isa = PBXGroup;
 			children = (
 				A4638A342335F1A10071A2AF /* _______________Tests.swift */,
 				A4638A362335F1A10071A2AF /* Info.plist */,
 			);
-			path = "クラスプロパティメソッドTests";
+			path = classpropatymethodTests;
 			sourceTree = "<group>";
 		};
-		A4638A3E2335F1A10071A2AF /* クラスプロパティメソッドUITests */ = {
+		A4638A3E2335F1A10071A2AF /* classpropatymethodUITests */ = {
 			isa = PBXGroup;
 			children = (
 				A4638A3F2335F1A10071A2AF /* _______________UITests.swift */,
 				A4638A412335F1A10071A2AF /* Info.plist */,
 			);
-			path = "クラスプロパティメソッドUITests";
+			path = classpropatymethodUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,7 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "クラスプロパティメソッド/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/classpropatymethod/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "クラスプロパティメソッド/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/classpropatymethod/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
