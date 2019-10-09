@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="baf-a7-4v2">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="tmy-IQ-nAo">
+            <objects>
+                <viewController id="JzB-xH-e38" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UZx-XL-82J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="OCI-Gm-7jC"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="iconfinder_social_media_isometric_21-tumblr_3529656" id="nxd-YQ-Xih"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bRO-2b-bAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187" y="-432"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="kJ5-6g-dQk">
+            <objects>
+                <viewController id="89d-fH-4Z1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2aQ-7C-lMO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="61A-vW-QZO"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" image="iconfinder_social_media_isometric_5-line_3529668" id="NBk-Xr-Fv5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i03-Ti-Cqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="680" y="103"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7zc-Xb-H0w">
+            <objects>
+                <tabBarController id="baf-a7-4v2" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q6U-Zk-Yjq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="89d-fH-4Z1" kind="relationship" relationship="viewControllers" id="f4B-ch-mKF"/>
+                        <segue destination="JzB-xH-e38" kind="relationship" relationship="viewControllers" id="bae-ff-hhh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="auf-2d-C0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-237" y="-221"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iconfinder_social_media_isometric_21-tumblr_3529656" width="28" height="28"/>
+        <image name="iconfinder_social_media_isometric_5-line_3529668" width="28" height="28"/>
+    </resources>
+</document>
