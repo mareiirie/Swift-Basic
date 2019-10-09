@@ -1,5 +1,5 @@
 //
-//  ViewController2.swift
+//  Account.swift
 //  1-1-4
 //
 //  Created by 入江真礼 on 2019/10/04.
