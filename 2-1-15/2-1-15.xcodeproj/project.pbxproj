@@ -13,7 +13,9 @@
 		A40E32FA2345F193009515B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40E32F82345F193009515B6 /* LaunchScreen.storyboard */; };
 		A40E33052345F193009515B6 /* __1_15Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40E33042345F193009515B6 /* __1_15Tests.swift */; };
 		A40E33102345F193009515B6 /* __1_15UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40E330F2345F193009515B6 /* __1_15UITests.swift */; };
-		A44D76DE234D6B3E00A8B095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44D76DD234D6B3E00A8B095 /* Assets.xcassets */; };
+		A44D7902234F55F500A8B095 /* 3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44D7901234F55F500A8B095 /* 3.storyboard */; };
+		A44D7904234F5A3900A8B095 /* 2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44D7903234F5A3900A8B095 /* 2.storyboard */; };
+		A44D7908234F5F9E00A8B095 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44D7907234F5F9E00A8B095 /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +48,9 @@
 		A40E330B2345F193009515B6 /* 2-1-15UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "2-1-15UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40E330F2345F193009515B6 /* __1_15UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __1_15UITests.swift; sourceTree = "<group>"; };
 		A40E33112345F193009515B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A44D76DD234D6B3E00A8B095 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
+		A44D7901234F55F500A8B095 /* 3.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = 3.storyboard; sourceTree = "<group>"; };
+		A44D7903234F5A3900A8B095 /* 2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = 2.storyboard; sourceTree = "<group>"; };
+		A44D7907234F5F9E00A8B095 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +105,10 @@
 				A40E32F12345F191009515B6 /* ViewController.swift */,
 				A40E32F32345F192009515B6 /* Main.storyboard */,
 				A40E32F82345F193009515B6 /* LaunchScreen.storyboard */,
-				A44D76DD234D6B3E00A8B095 /* Assets.xcassets */,
 				A40E32FB2345F193009515B6 /* Info.plist */,
+				A44D7901234F55F500A8B095 /* 3.storyboard */,
+				A44D7903234F5A3900A8B095 /* 2.storyboard */,
+				A44D7907234F5F9E00A8B095 /* Media.xcassets */,
 			);
 			path = "2-1-15";
 			sourceTree = "<group>";
@@ -229,9 +235,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A44D7908234F5F9E00A8B095 /* Media.xcassets in Resources */,
 				A40E32FA2345F193009515B6 /* LaunchScreen.storyboard in Resources */,
-				A44D76DE234D6B3E00A8B095 /* Assets.xcassets in Resources */,
 				A40E32F52345F192009515B6 /* Main.storyboard in Resources */,
+				A44D7902234F55F500A8B095 /* 3.storyboard in Resources */,
+				A44D7904234F5A3900A8B095 /* 2.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +355,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -408,6 +417,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -433,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "2-1-15/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "2-1-15/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
