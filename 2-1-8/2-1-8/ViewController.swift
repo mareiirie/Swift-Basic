@@ -11,9 +11,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     
     var pickerView: UIPickerView = UIPickerView()
-    let list: [String] = ["ジョルノ・ジョバーナ", "ブチャラティ", "ナランチャ", "ミスタ", "フーゴ", "アバッキオ"]
-    
-    
+    let list = ["ジョルノ・ジョバーナ", "ブチャラティ", "ナランチャ", "ミスタ", "フーゴ", "アバッキオ"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
