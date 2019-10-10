@@ -16,40 +16,39 @@ class ViewController: UIViewController {
     @IBAction func showAlert(_ sender: UIButton) {
         let actionSheet = UIAlertController(title: "タイトル", message: "メッセージ", preferredStyle: UIAlertController.Style.actionSheet)
         
-        let action1 = UIAlertAction(title: "Facebook",
+        
+        let facebookAction = UIAlertAction(title: "Facebook",
                                     style: UIAlertAction.Style.default,
                                     handler: {
             (action: UIAlertAction!) in
             print("Facebook")
         })
         
-        let action2 = UIAlertAction(title: "Twitter",
+        let twitterAction = UIAlertAction(title: "Twitter",
                                     style: UIAlertAction.Style.default,
-                                    handler: {
-            (action: UIAlertAction!) in
+                                    handler: { _ in
             print("Twitter")
         })
         
-        let action3 = UIAlertAction(title: "LINE",
+        let lineAction = UIAlertAction(title: "LINE",
                                     style: UIAlertAction.Style.destructive,
-                                    handler: {
-            (action: UIAlertAction!) in
+                                    handler: { _ in
             print("LINE")
         })
         
         let cancel = UIAlertAction(title: "キャンセル",
                                    style: UIAlertAction.Style.cancel,
-                                   handler: {
-            (action: UIAlertAction!) in
+                                   handler: { _ in
             print("キャンセルをタップした時の処理")
         })
         
-        actionSheet.addAction(action1)
-        actionSheet.addAction(action2)
-        actionSheet.addAction(action3)
+        
+        actionSheet.addAction(facebookAction)
+        actionSheet.addAction(twitterAction)
+        actionSheet.addAction(lineAction)
         actionSheet.addAction(cancel)
         
-        self.present(actionSheet, animated: true, completion: nil)
+        present(actionSheet, animated: true, completion: nil)
     }
     
 }
