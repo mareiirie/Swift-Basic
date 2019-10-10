@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>ジョルノジョバーナ</string>
+		<key>note</key>
+		<string>ゴールデンエクスペリエンス⇨「矢」の力でゴールデンエクスペリエンスレクイエムに進化し、ディアボロのスタンドキングクリムゾンを圧倒した。</string>
+		<key>image</key>
+		<string>UNADJUSTEDNONRAW_thumb_1ef</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ブローノブチャラティ</string>
+		<key>note</key>
+		<string>スティッキーフィンガー</string>
+		<key>image</key>
+		<string>UNADJUSTEDNONRAW_thumb_1f1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ミスタ</string>
+		<key>note</key>
+		<string>セックスピストルズ</string>
+		<key>image</key>
+		<string>UNADJUSTEDNONRAW_thumb_1f0</string>
+	</dict>
+</array>
+</plist>
