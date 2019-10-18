@@ -28,39 +28,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Fe9-Ma-tHr">
-                                        <rect key="frame" x="0.0" y="50" width="109" height="126"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="109" height="126"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7a-HX-mML">
-                                                    <rect key="frame" x="1" y="113" width="107" height="12"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GLk-TW-nR3">
-                                                    <rect key="frame" x="1" y="17" width="101" height="95"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="95" id="OiH-9z-jDz"/>
-                                                        <constraint firstAttribute="width" constant="101" id="kBi-ug-Lwa"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="GLk-TW-nR3" firstAttribute="top" secondItem="Fe9-Ma-tHr" secondAttribute="topMargin" constant="-35" id="Cah-AA-uf8"/>
-                                            <constraint firstAttribute="trailing" secondItem="s7a-HX-mML" secondAttribute="trailing" constant="1" id="O9g-e5-jEG"/>
-                                            <constraint firstItem="GLk-TW-nR3" firstAttribute="leading" secondItem="s7a-HX-mML" secondAttribute="leading" id="TM9-N6-OdU"/>
-                                            <constraint firstItem="s7a-HX-mML" firstAttribute="top" secondItem="GLk-TW-nR3" secondAttribute="bottom" constant="1" id="Tu6-Tk-b6b"/>
-                                            <constraint firstAttribute="bottom" secondItem="s7a-HX-mML" secondAttribute="bottom" constant="1" id="lOJ-e2-cYB"/>
-                                            <constraint firstItem="s7a-HX-mML" firstAttribute="leading" secondItem="Fe9-Ma-tHr" secondAttribute="leading" constant="1" id="ony-ma-LxQ"/>
-                                        </constraints>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="HeaderView" id="EQB-tc-3pI" customClass="UICollectionViewCell">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
@@ -91,6 +59,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="Vff-Of-UJI" id="mWW-Eo-8ml"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

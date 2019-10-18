@@ -14,6 +14,8 @@
 		A44D7680234C48FF00A8B095 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44D767E234C48FF00A8B095 /* LaunchScreen.storyboard */; };
 		A44D768B234C48FF00A8B095 /* __1_13Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44D768A234C48FF00A8B095 /* __1_13Tests.swift */; };
 		A44D7696234C48FF00A8B095 /* __1_13UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44D7695234C48FF00A8B095 /* __1_13UITests.swift */; };
+		A4D6D60423598F85007B10C2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D6D60223598F85007B10C2 /* CustomCell.swift */; };
+		A4D6D60523598F85007B10C2 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4D6D60323598F85007B10C2 /* CustomCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		A44D7691234C48FF00A8B095 /* 2-1-13UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "2-1-13UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44D7695234C48FF00A8B095 /* __1_13UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __1_13UITests.swift; sourceTree = "<group>"; };
 		A44D7697234C48FF00A8B095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4D6D60223598F85007B10C2 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		A4D6D60323598F85007B10C2 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				A44D767C234C48FF00A8B095 /* Assets.xcassets */,
 				A44D767E234C48FF00A8B095 /* LaunchScreen.storyboard */,
 				A44D7681234C48FF00A8B095 /* Info.plist */,
+				A4D6D60223598F85007B10C2 /* CustomCell.swift */,
+				A4D6D60323598F85007B10C2 /* CustomCell.xib */,
 			);
 			path = "2-1-13";
 			sourceTree = "<group>";
@@ -231,6 +237,7 @@
 			files = (
 				A44D7680234C48FF00A8B095 /* LaunchScreen.storyboard in Resources */,
 				A44D767D234C48FF00A8B095 /* Assets.xcassets in Resources */,
+				A4D6D60523598F85007B10C2 /* CustomCell.xib in Resources */,
 				A44D767B234C48FE00A8B095 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A44D7678234C48FE00A8B095 /* ViewController.swift in Sources */,
+				A4D6D60423598F85007B10C2 /* CustomCell.swift in Sources */,
 				A44D7676234C48FE00A8B095 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
