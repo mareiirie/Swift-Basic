@@ -1,14 +1,14 @@
 //
-//  __1_10UITests.swift
-//  2-1-10UITests
+//  __1_10_New_UITests.swift
+//  2-1-10(New)UITests
 //
-//  Created by 入江真礼 on 2019/10/03.
+//  Created by 入江真礼 on 2019/10/12.
 //  Copyright © 2019 入江真礼. All rights reserved.
 //
 
 import XCTest
 
-class __1_10UITests: XCTestCase {
+class __1_10_New_UITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  2-1-10
+//  2-1-10(New)
 //
-//  Created by 入江真礼 on 2019/10/03.
+//  Created by 入江真礼 on 2019/10/12.
 //  Copyright © 2019 入江真礼. All rights reserved.
 //
 
