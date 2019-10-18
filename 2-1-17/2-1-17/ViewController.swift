@@ -13,9 +13,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func buttonTapped(sender : AnyObject) {
-        performSegue(withIdentifier: "toViewController2",sender: nil)
-        
+    @IBAction func next(_ sender: Any) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let second = storyboard.instantiateViewController(withIdentifier: "second")
+        self.present(second, animated: true, completion: nil)
     }
     
     // Segue 準備

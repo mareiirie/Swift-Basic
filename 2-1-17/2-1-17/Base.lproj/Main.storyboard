@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="__1_17" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="first" id="BYZ-38-t0r" customClass="ViewController" customModule="__1_17" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,8 +23,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <action selector="buttonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4z2-H6-UvG"/>
-                                    <segue destination="tjS-Ls-IdW" kind="presentation" identifier="toViewController2" id="lZ8-lc-8fs"/>
+                                    <action selector="buttonTapped:" destination="V0H-hH-L4x" eventType="touchUpInside" id="hJK-ge-68w"/>
+                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kxv-EF-pCI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -33,35 +33,17 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="V0H-hH-L4x" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
+            <point key="canvasLocation" x="-74" y="-61"/>
         </scene>
-        <!--View Controller2-->
-        <scene sceneID="9Sd-Z6-WxH">
+        <!--2-->
+        <scene sceneID="7VS-bb-Qzn">
             <objects>
-                <viewController id="tjS-Ls-IdW" customClass="ViewController2" customModule="__1_17" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="C0m-zP-B90">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfX-TB-6Ey">
-                                <rect key="frame" x="46" y="401" width="273" height="119"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="backButton:" destination="tjS-Ls-IdW" eventType="touchUpInside" id="h5h-of-qk9"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Npb-z0-v1E"/>
-                    </view>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="backSegue" id="vqM-br-akL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4bt-Ud-iIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="2" id="KCk-Af-Ex4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smL-Pi-G7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="769.56521739130437" y="117.85714285714285"/>
+            <point key="canvasLocation" x="506" y="-102"/>
         </scene>
     </scenes>
 </document>
