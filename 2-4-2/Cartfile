@@ -1,0 +1,6 @@
+github "Alamofire/Alamofire"
+github "SwiftyJSON/SwiftyJSON"
+github "realm/realm-cocoa" == 3.17.1
+
+
+
