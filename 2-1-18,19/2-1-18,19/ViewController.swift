@@ -21,7 +21,10 @@ class ViewController: UIViewController {
         let vc2 = self.storyboard?.instantiateViewController(withIdentifier: "next") as! ViewController2
         
         //ViewController2のtextにtextFieldのテキストを代入
-        vc2.text = textField.text!
+        guard let text = textField.text else {
+            return
+        }
+        vc2.text = text
         
         //NavigationControllerを継承したViewControllerを遷移
         self.navigationController?.pushViewController(vc2, animated: true)

@@ -12,7 +12,7 @@ class ViewController2: UIViewController {
     
     @IBOutlet weak var label: UILabel!
     
-    var text = String()
+    var text = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
