@@ -14,9 +14,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func next(_ sender: Any) {
-        let storyboard: UIStoryboard = self.storyboard!
-        let second = storyboard.instantiateViewController(withIdentifier: "second")
-        self.present(second, animated: true, completion: nil)
+        let storyboard: UIStoryboard = UIStoryboard(name: "ViewController2", bundle: nil)
+        let second = storyboard.instantiateInitialViewController()
+        self.present(second!, animated: true, completion: nil)
     }
     
     // Segue 準備

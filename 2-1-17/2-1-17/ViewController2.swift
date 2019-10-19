@@ -14,8 +14,6 @@ class ViewController2: UIViewController {
         
     }
     @IBAction func back(_ sender: Any) {
-        let storyboard: UIStoryboard = self.storyboard!
-        let first = storyboard.instantiateViewController(withIdentifier: "first")
         self.dismiss(animated: true, completion: nil)
     }
 
