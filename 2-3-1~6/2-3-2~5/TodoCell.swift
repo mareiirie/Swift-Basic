@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomCell: UITableViewCell {
+class TodoCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var limitLabel: UILabel!

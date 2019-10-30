@@ -11,7 +11,7 @@ import RealmSwift
 
 class TableViewController: UITableViewController {
 
-    var todoItem: Results<trTodo>!
+    var todoItem: Results<ListTodo>!
 //    lazy var items = Array(todoItem)
 
     override func viewDidLoad() {
@@ -19,7 +19,7 @@ class TableViewController: UITableViewController {
          //永続化されているデータをフィルターかけて取りだし、todoItemに代入。todoItemはresult型になっている。
         do{
             let realm = try Realm()
-            todoItem = realm.objects(trTodo.self)
+            todoItem = realm.objects(ListTodo.self)
             todoItem = todoItem.filter("deleteFlg = false")
             todoItem = todoItem.sorted(byKeyPath: "limitDate", ascending: false)
             tableView.reloadData()
@@ -41,7 +41,7 @@ class TableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as? CustomCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as? TodoCell {
  
             print("②−１カスタムセルを呼び出し:todoItem数\(todoItem.count)")
             let object = todoItem[indexPath.row]
@@ -90,7 +90,7 @@ print("④−２削除実行しindexPathの該当IDを代入:todoItem数\(todoIt
                         let realm = try Realm()
                             try realm.write {
                             let value: [String: Any] = ["todoID": id, "deleteFlg": true]
-                                realm.create(trTodo.self, value: value, update: true)
+                                realm.create(ListTodo.self, value: value, update: true)
                         }
 print("ToDo Saved")
 print("④−３RealmにtodoItemの削除フラグ上書き:todoItem数\(todoItem.count)items数\(items.count)")

@@ -26,7 +26,7 @@ class InputViewController: UIViewController {
 
     @IBAction func addButtonTapped(_ sender: Any) {
 
-        let newTodo = trTodo()
+        let newTodo = ListTodo()
     
         // textFieldに入力したデータをnewTodoのtitleに代入
         newTodo.todoTitle = titleTextField.text!

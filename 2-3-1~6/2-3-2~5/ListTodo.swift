@@ -9,14 +9,14 @@
 import Foundation
 import RealmSwift
 
-class trTodo: Object {
-    @objc dynamic var todoID : String = NSUUID().uuidString
-    @objc dynamic var todoTitle : String = ""
-    @objc dynamic var todoContents : String = ""
-    @objc dynamic var created : String = ""
-    @objc dynamic var modified : String = ""
-    @objc dynamic var limitDate : String = ""
-    @objc dynamic var deleteFlg : Bool = false
+class ListTodo: Object {
+    @objc dynamic var todoID = NSUUID().uuidString
+    @objc dynamic var todoTitle = ""
+    @objc dynamic var todoContents = ""
+    @objc dynamic var created = ""
+    @objc dynamic var modified = ""
+    @objc dynamic var limitDate = ""
+    @objc dynamic var deleteFlg = false
     
     override static func primaryKey() -> String? {
         return "todoID"

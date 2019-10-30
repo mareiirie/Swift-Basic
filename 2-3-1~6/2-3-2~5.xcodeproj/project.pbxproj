@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		A40D4B9923500B9500DC74DF /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40D4B9823500B9500DC74DF /* Realm.framework */; };
 		A40D4B9B23500BAF00DC74DF /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40D4B9A23500BAF00DC74DF /* RealmSwift.framework */; };
-		A40D4B9D2350125C00DC74DF /* trTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D4B9C2350125C00DC74DF /* trTodo.swift */; };
+		A40D4B9D2350125C00DC74DF /* ListTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D4B9C2350125C00DC74DF /* ListTodo.swift */; };
 		A40D4B9F23503B1600DC74DF /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D4B9E23503B1600DC74DF /* InputViewController.swift */; };
-		A40D4BEB2352FB6D00DC74DF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D4BEA2352FB6D00DC74DF /* CustomCell.swift */; };
+		A40D4BEB2352FB6D00DC74DF /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D4BEA2352FB6D00DC74DF /* TodoCell.swift */; };
 		A44D78D2234F0C8800A8B095 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44D78D1234F0C8800A8B095 /* AppDelegate.swift */; };
 		A44D78D4234F0C8800A8B095 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44D78D3234F0C8800A8B095 /* TableViewController.swift */; };
 		A44D78D7234F0C8800A8B095 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44D78D5234F0C8800A8B095 /* Main.storyboard */; };
@@ -41,9 +41,9 @@
 /* Begin PBXFileReference section */
 		A40D4B9823500B9500DC74DF /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		A40D4B9A23500BAF00DC74DF /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		A40D4B9C2350125C00DC74DF /* trTodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trTodo.swift; sourceTree = "<group>"; };
+		A40D4B9C2350125C00DC74DF /* ListTodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTodo.swift; sourceTree = "<group>"; };
 		A40D4B9E23503B1600DC74DF /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
-		A40D4BEA2352FB6D00DC74DF /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		A40D4BEA2352FB6D00DC74DF /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
 		A44D78CE234F0C8800A8B095 /* 2-3-2~5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2-3-2~5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44D78D1234F0C8800A8B095 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A44D78D3234F0C8800A8B095 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -126,8 +126,8 @@
 				A44D78D8234F0C8900A8B095 /* Assets.xcassets */,
 				A44D78DA234F0C8900A8B095 /* LaunchScreen.storyboard */,
 				A44D78DD234F0C8900A8B095 /* Info.plist */,
-				A40D4B9C2350125C00DC74DF /* trTodo.swift */,
-				A40D4BEA2352FB6D00DC74DF /* CustomCell.swift */,
+				A40D4B9C2350125C00DC74DF /* ListTodo.swift */,
+				A40D4BEA2352FB6D00DC74DF /* TodoCell.swift */,
 			);
 			path = "2-3-2~5";
 			sourceTree = "<group>";
@@ -306,9 +306,9 @@
 			files = (
 				A44D78D4234F0C8800A8B095 /* TableViewController.swift in Sources */,
 				A44D78D2234F0C8800A8B095 /* AppDelegate.swift in Sources */,
-				A40D4BEB2352FB6D00DC74DF /* CustomCell.swift in Sources */,
+				A40D4BEB2352FB6D00DC74DF /* TodoCell.swift in Sources */,
 				A40D4B9F23503B1600DC74DF /* InputViewController.swift in Sources */,
-				A40D4B9D2350125C00DC74DF /* trTodo.swift in Sources */,
+				A40D4B9D2350125C00DC74DF /* ListTodo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
