@@ -43,53 +43,31 @@ class ArticleListViewController: UIViewController, UITableViewDataSource, UITabl
                     let forecast = info.forecasts
                     let desc = info.description
                     let descript = desc.text
-                    //配列forecastsからう要素を取り出す。forecasts配列の要素はJSONデータを確認する
-                    let info0 = forecast[0]
-                    let info1 = forecast[1]
-                    let info2 = forecast[2]
                     
-                    let date0 = info0.date
-                    let telop0 = info0.telop
-                    let url0 = info0.image.url
-                    
-                    let date1 = info1.date
-                    let telop1 = info1.telop
-                    let url1 = info1.image.url
-                    
-                    let date2 = info2.date
-                    let telop2 = info2.telop
-                    let url2 = info2.image.url
-                    
+                    for forecast in forecast {
+                        addForecast(forecast: forecast)
+                    }
                     //descriptionをラベルに貼りつけ
                     self.descriptionLabel.text = descript
-                    
-                    //APIで取得した上記のStringを引数に代入し、ファンクション起動
-                    realmadd(d0: date0, t0: telop0, u0: url0, d1: date1, t1: telop1, u1: url1, d2: date2, t2: telop2, u2: url2)
-                    
-                 //   realmadd(d0: date0, t0: telop0, u0: url0, d1: date1, t1: telop1, u1: url1)
-                    
                 } catch {
                     print(error)
                 }
         }
         
         //引数ありのファンクションを作成、「自分で作成したテーブル「Infos」の変数名：引数名」
-        func realmadd(d0: String, t0: String, u0: String, d1: String, t1: String, u1: String, d2: String, t2: String,u2 :String) {
-        //func realmadd(d0: String, t0: String, u0: String, d1: String, t1: String, u1: String) {
+        func addForecast(forecast: Forecast){
             do{
                 let realm = try Realm()
                 try realm.write({ () -> Void in
-                    let addinfos = [Infos(value: ["date1": d0, "telop1": t0, "url1": u0]),
-                                    Infos(value: ["date1": d1, "telop1": t1, "url1": u1]),
-                                    Infos(value: ["date1": d2, "telop1": t2, "url1": u2])]
-                    
+                    let addinfos = [Infos(value: ["date1": forecast.date,"telop1": forecast.telop, "url1": forecast.image.url])]
                     realm.add(addinfos)
+                    print("addinfosの一つは\(forecast.date)")
                     print("Saved")
+                    print(Realm.Configuration.defaultConfiguration.fileURL!)
                 })
             }catch{
                 print("Save is Faild")
             }
-            
         }
         
         print(Realm.Configuration.defaultConfiguration.fileURL!)
