@@ -22,7 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(url.path)
         print(url.query)
         
-        let urlHost : String = url.host!
+//        let urlHost : String = url.host!
+        guard let urlHost = url.host else {
+            fatalError("error")
+        }
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.viewController.labelshow(hosturl: urlHost)
