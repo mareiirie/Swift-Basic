@@ -83,3 +83,6 @@ fastlane/test_output
 *.swp
 !.gitkeep
 .DS_Store
+Podfile
+Podfile.lock
+Pods/
