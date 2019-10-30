@@ -12,25 +12,31 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var textField: UITextField!
     
+    var maxLengths = [UITextField: Int]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
         // Do any additional setup after loading the view.
     }
 
-
 //entEditingをtouchesBegan機能として実装
         override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
 }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // 入力を反映させたテキストを取得する
+        let resultText: String = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+        if resultText.count <= 30 {
+            return true
+        }
+        return false
+    }
 
 }
 
-//入力がない場合、「エンターは非活性」という指示に対し、キーボード上の「完了キー」はすでにその設定ができている・・
-
-//////maxlength設定機能を拡張したけれど、入力までは制限されていない・・・？
-//private var maxLengths = [UITextField: Int]()
-//
+////////maxlength設定機能を拡張したけれど、入力までは制限されていない・・・？
 //extension UITextField {
 //    @IBInspectable var maxLength: Int {
 //        get {
