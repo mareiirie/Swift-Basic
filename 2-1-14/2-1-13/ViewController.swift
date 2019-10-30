@@ -14,11 +14,11 @@ UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
 
-    enum EnumCell: Int {
-        case firstCell = 0
-        case secondCell = 1
-        case thirdCell = 2
-    }
+enum EnumCell: Int {
+    case firstCell = 0
+    case secondCell = 1
+    case thirdCell = 2
+}
     
 let photos1 = ["ジョルノジョバーナ", "ミスタ", "リゾット", "ナランチャ", "ブチャラティ"]
 let photos2 = ["ディオ", "ポルナレフ", "花京院", "承太郎"]
