@@ -23,10 +23,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="55" id="cXW-K8-E8b" customClass="CustomCell" customModule="__4_2" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="55" id="cXW-K8-E8b" customClass="ArticleCell" customModule="__4_2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cXW-K8-E8b" id="aQx-uv-YJY" customClass="CustomCell" customModule="__4_2" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cXW-K8-E8b" id="aQx-uv-YJY" customClass="ArticleCell" customModule="__4_2" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -59,7 +59,7 @@
                                             <outlet property="urlView" destination="8If-qy-dje" id="VTg-8c-ILs"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DescriptionCell" rowHeight="715" id="OZo-4o-xli" customClass="CustomCell" customModule="__4_2" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DescriptionCell" rowHeight="715" id="OZo-4o-xli" customClass="ArticleCell" customModule="__4_2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="83" width="414" height="715"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OZo-4o-xli" id="5Ra-JO-6tY">
@@ -67,7 +67,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4SQ-Mv-VUx" userLabel="descriptionLabel">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="714.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="228" height="714.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

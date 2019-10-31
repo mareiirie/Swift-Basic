@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 import RealmSwift
 
-class CustomCell: UITableViewCell {
+class ArticleCell: UITableViewCell {
     
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var urlView: UIImageView!

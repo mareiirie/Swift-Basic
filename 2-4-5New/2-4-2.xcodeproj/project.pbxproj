@@ -19,7 +19,7 @@
 		A4FC57422356E51D003CDA4A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FC57412356E51D003CDA4A /* Realm.framework */; };
 		A4FC57442356E532003CDA4A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FC57432356E532003CDA4A /* Alamofire.framework */; };
 		A4FC57462356E8EB003CDA4A /* Infos.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FC57452356E8EB003CDA4A /* Infos.swift */; };
-		A4FC574F23580114003CDA4A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FC574D23580114003CDA4A /* CustomCell.swift */; };
+		A4FC574F23580114003CDA4A /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FC574D23580114003CDA4A /* ArticleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,7 @@
 		A4FC57412356E51D003CDA4A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		A4FC57432356E532003CDA4A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		A4FC57452356E8EB003CDA4A /* Infos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Infos.swift; sourceTree = "<group>"; };
-		A4FC574D23580114003CDA4A /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		A4FC574D23580114003CDA4A /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +144,7 @@
 		A479DC85236322C200E9F8E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A4FC574D23580114003CDA4A /* CustomCell.swift */,
+				A4FC574D23580114003CDA4A /* ArticleCell.swift */,
 				A40D4BFC235437C400DC74DF /* Main.storyboard */,
 			);
 			path = View;
@@ -334,7 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A479DC8A2363247300E9F8E1 /* UseInfos.swift in Sources */,
-				A4FC574F23580114003CDA4A /* CustomCell.swift in Sources */,
+				A4FC574F23580114003CDA4A /* ArticleCell.swift in Sources */,
 				A40D4BF9235437C400DC74DF /* AppDelegate.swift in Sources */,
 				A4FC57462356E8EB003CDA4A /* Infos.swift in Sources */,
 				A40D4C312354696A00DC74DF /* Item.swift in Sources */,

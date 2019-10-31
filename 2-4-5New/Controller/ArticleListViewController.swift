@@ -10,93 +10,33 @@ import UIKit
 import Alamofire
 import RealmSwift
 
-class ArticleListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UseInfosDelegate{
-
+class ArticleListViewController: UIViewController {
+    
     @IBOutlet weak var tableview: UITableView!
-
-//InfosをオブジェクトにもつArrayが、このクラスのどこでも使えるように（主にtableviewの中で使うため）変数を初期値で宣言しておく。
-//後は、デリゲートでModelがとってきたデータをsetDataが受け取り、このクラスで定義しているinfoListに、ModelのinfosListsを代入する。
-//このクラスのinfoListに値が入ったので、tableviewをリロードしてあげれば読み込まれる。
-    var infoList: Array<Infos> = []
+    
+    //InfosをオブジェクトにもつArrayが、このクラスのどこでも使えるように（主にtableviewの中で使うため）変数を初期値で宣言しておく。
+    //後は、デリゲートでModelがとってきたデータをsetDataが受け取り、このクラスで定義しているinfoListに、ModelのinfosListsを代入する。
+    //このクラスのinfoListに値が入ったので、tableviewをリロードしてあげれば読み込まれる。
+    var infoList: [Infos] = []
     var descripttext = ""
-    let sectionTitle: NSArray = ["天気情報","概要",]
+    let sectionTitle = ["天気情報","概要"]
+    enum Section: Int {
+        case CustomCell = 0
+        case DescriptionCell
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let useinfos = UseInfos()
+        useinfos.useinfosdelegate = self
         useinfos.saveData()
         print("savedataメソッドを使う")
-        useinfos.useinfosdelegate = self
         print("Modelから通知を受けたのでsetDataメソッドを使う")
-        tableview.delegate = self
         tableview.dataSource = self
-        }
-
-    func setData(descript: String, infosLists: Array<Infos>) {
-        descripttext = descript
-        print("decsriptをもらったので代入します")
-        infoList = infosLists
-        print("infoListsをもらったので、infoListに代入します")
-        tableview.reloadData()
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        print("セクション数は\(sectionTitle.count)です")
-        return sectionTitle.count
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)->Int {
-        if section == 0 {
-            print("numberofrowsectionは\(infoList.count)")
-            return infoList.count
-        }else if section == 1 {
-            return 1
-        }else{
-            return 0
-        }
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        switch indexPath.section {
-        
-        case 0:
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as? CustomCell {
-        let object = infoList[indexPath.row]
-         print("tableviewcellの処理を行う")
-        cell.dateView.text = object.date1
-        cell.telopView.text = object.telop1
-         print("dateに入るのは\(String(describing: object.date1))")
-        let imageView = cell.urlView as UIImageView
-        imageView.setImage(fromUrl: object.url1)
-         print("tableviewcellにデータを代入しました")
-        return cell
-            }
-            
-        case 1:
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionCell", for: indexPath) as? CustomCell {
-        cell.descriptionLabel.text = descripttext
-            print("descriptは\(descripttext)です")
-        return cell
-            }
-            
-        default :
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as? CustomCell {
-                let object = infoList[indexPath.row]
-                cell.dateView.text = "default"
-                }
-        }
-    return UITableViewCell()
-    }
-    
-    func tableView(_ table: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         tableview.estimatedRowHeight = 60
-        return UITableView.automaticDimension
-        
+        tableview.rowHeight = UITableView.automaticDimension
     }
-
 }
-
 
 extension UIImageView {
     
@@ -131,5 +71,83 @@ extension UIImageView {
                 
             }
         }
+    }
+}
+
+extension ArticleListViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        print("セクション数は\(sectionTitle.count)です")
+        return sectionTitle.count
+    }
+    
+    //enum を使用
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)->Int {
+        switch Section(rawValue: section) {
+        case .some(.CustomCell):
+            return infoList.count
+        case .some(.DescriptionCell):
+            return 1
+        case .none:
+            return 0
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let enumSection = Section(rawValue: indexPath.section)
+        switch enumSection {
+        case .some(.CustomCell):
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as? ArticleCell {
+                let object = infoList[indexPath.row]
+                print("tableviewcellの処理を行う")
+                cell.dateView.text = object.date
+                cell.telopView.text = object.telop
+                print("dateに入るのは\(String(describing: object.date))")
+                let imageView = cell.urlView as UIImageView
+                imageView.setImage(fromUrl: object.url)
+                print("tableviewcellにデータを代入しました")
+                return cell
+            }
+            
+        case .some(.DescriptionCell):
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionCell", for: indexPath) as? ArticleCell {
+                cell.descriptionLabel.text = descripttext
+                print("descriptは\(descripttext)です")
+                return cell
+            }
+            
+        default :
+            print("Section error")
+        }
+        return UITableViewCell()
+    }
+    
+}
+
+extension ArticleListViewController: UseInfosDelegate {
+    
+    func setData(descript: String, infosLists: Array<Infos>) {
+        descripttext = descript
+        print("decsriptをもらったので代入します")
+        infoList = infosLists
+        print("infoListsをもらったので、infoListに代入します")
+        tableview.reloadData()
+    }
+    //alertで出す
+    func error(descript: String) {
+        let alert: UIAlertController = UIAlertController(title: "エラー",
+                                                         message: descript, preferredStyle:  UIAlertController.Style.alert)
+        
+        let defaultAction: UIAlertAction = UIAlertAction(title: "OK",
+                                                         style: UIAlertAction.Style.default,
+                                                         handler:{
+                                                            (action: UIAlertAction!) -> Void in
+                                                            print("OK")
+        })
+        
+        alert.addAction(defaultAction)
+        present(alert, animated: true, completion: nil)
     }
 }

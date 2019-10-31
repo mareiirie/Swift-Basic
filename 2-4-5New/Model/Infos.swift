@@ -11,8 +11,8 @@ import RealmSwift
 
 class Infos: Object{
     
-    @objc dynamic var date1: String?
-    @objc dynamic var telop1: String?
-    @objc dynamic var url1: String?
+    @objc dynamic var date: String?
+    @objc dynamic var telop: String?
+    @objc dynamic var url: String?
     
 }
