@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomCell: UITableViewCell {
+class JojoInfoCell: UITableViewCell {
 
    //imageという変数名は使えなかった・・
     

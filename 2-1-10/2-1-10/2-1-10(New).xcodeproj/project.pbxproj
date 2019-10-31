@@ -14,7 +14,7 @@
 		A40D4BB72351DC3700DC74DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40D4BB52351DC3700DC74DF /* LaunchScreen.storyboard */; };
 		A40D4BC22351DC3700DC74DF /* __1_10_New_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D4BC12351DC3700DC74DF /* __1_10_New_Tests.swift */; };
 		A40D4BCD2351DC3700DC74DF /* __1_10_New_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D4BCC2351DC3700DC74DF /* __1_10_New_UITests.swift */; };
-		A40D4BE02351DDBE00DC74DF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D4BDE2351DDBE00DC74DF /* CustomCell.swift */; };
+		A40D4BE02351DDBE00DC74DF /* JojoInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D4BDE2351DDBE00DC74DF /* JojoInfoCell.swift */; };
 		A40D4BE12351DDBE00DC74DF /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40D4BDF2351DDBE00DC74DF /* CustomCell.xib */; };
 		A40D4BE32351E29200DC74DF /* PropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A40D4BE22351E29200DC74DF /* PropertyList.plist */; };
 /* End PBXBuildFile section */
@@ -50,7 +50,7 @@
 		A40D4BC82351DC3700DC74DF /* 2-1-10(New)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "2-1-10(New)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40D4BCC2351DC3700DC74DF /* __1_10_New_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __1_10_New_UITests.swift; sourceTree = "<group>"; };
 		A40D4BCE2351DC3700DC74DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A40D4BDE2351DDBE00DC74DF /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		A40D4BDE2351DDBE00DC74DF /* JojoInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JojoInfoCell.swift; sourceTree = "<group>"; };
 		A40D4BDF2351DDBE00DC74DF /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		A40D4BE22351E29200DC74DF /* PropertyList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PropertyList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +103,7 @@
 		A40D4BAB2351DC3500DC74DF /* 2-1-10(New) */ = {
 			isa = PBXGroup;
 			children = (
-				A40D4BDE2351DDBE00DC74DF /* CustomCell.swift */,
+				A40D4BDE2351DDBE00DC74DF /* JojoInfoCell.swift */,
 				A40D4BDF2351DDBE00DC74DF /* CustomCell.xib */,
 				A40D4BAC2351DC3500DC74DF /* AppDelegate.swift */,
 				A40D4BAE2351DC3500DC74DF /* ViewController.swift */,
@@ -268,7 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40D4BAF2351DC3500DC74DF /* ViewController.swift in Sources */,
-				A40D4BE02351DDBE00DC74DF /* CustomCell.swift in Sources */,
+				A40D4BE02351DDBE00DC74DF /* JojoInfoCell.swift in Sources */,
 				A40D4BAD2351DC3500DC74DF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PCCZJUYRT6;
 				INFOPLIST_FILE = "2-1-10(New)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -462,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PCCZJUYRT6;
 				INFOPLIST_FILE = "2-1-10(New)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

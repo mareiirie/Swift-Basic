@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tbl: UITableView!
-  var items = [Dictionary<String, String>]()
-
+    var items = [[String:String]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,35 +24,35 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
         tbl.estimatedRowHeight = 50
         tbl.rowHeight = UITableView.automaticDimension
-// pathは、Plistからとってきています
+        // pathは、Plistからとってきています
         let path = Bundle.main.path(forResource: "PropertyList", ofType:"plist")
-//itemsは、plistからとってきたpathのうち、arrayです
-        items = NSArray(contentsOfFile:path!)as! [Dictionary<String, String>]
+        //itemsは、plistからとってきたpathのうち、arrayです
+        items = NSArray(contentsOfFile:path!)as! [[String:String]]
         
     }
     
-//numberofrowinsectionの数は、dicの数にしたい
+    //numberofrowinsectionの数は、dicの数にしたい
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-          let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomCell
-   
-    let imgName = items[indexPath.row]["name"]
-    cell.label.text = items[indexPath.row]["name"]
-    cell.label2.text = items[indexPath.row]["note"]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! JojoInfoCell
+        
+        let imgName = items[indexPath.row]["name"]
+        cell.label.text = items[indexPath.row]["name"]
+        cell.label2.text = items[indexPath.row]["note"]
         cell.img.image = UIImage(named: imgName as! String)
-
+        
         return cell
     }
     
-
-
     
-
-
-        // Do any additional setup after loading the view.
-    }
+    
+    
+    
+    
+    // Do any additional setup after loading the view.
+}
 
 
 
