@@ -13,8 +13,8 @@ class JojoInfoCell: UITableViewCell {
    //imageという変数名は使えなかった・・
     
     @IBOutlet weak var img: UIImageView!
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var noteLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

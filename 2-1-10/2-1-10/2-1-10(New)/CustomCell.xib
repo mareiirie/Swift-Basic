@@ -53,8 +53,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="img" destination="mzW-vo-K3X" id="ZG6-8E-tLY"/>
-                <outlet property="label" destination="UBe-Iy-B6M" id="cz8-jN-3f4"/>
-                <outlet property="label2" destination="gGn-pt-WYw" id="xU6-iJ-z30"/>
+                <outlet property="nameLabel" destination="UBe-Iy-B6M" id="cz8-jN-3f4"/>
+                <outlet property="noteLabel" destination="gGn-pt-WYw" id="xU6-iJ-z30"/>
             </connections>
             <point key="canvasLocation" x="-23.188405797101453" y="114.50892857142857"/>
         </tableViewCell>

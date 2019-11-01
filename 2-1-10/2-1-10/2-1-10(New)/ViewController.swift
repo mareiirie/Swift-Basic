@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
     
     @IBOutlet weak var tbl: UITableView!
     var items = [[String:String]]()
@@ -16,43 +16,43 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tbl.delegate = self
-        self.tbl.dataSource = self
+        tbl.dataSource = self
         
         // Identifierを設定
-        self.tbl.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
+        tbl.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         
         tbl.estimatedRowHeight = 50
         tbl.rowHeight = UITableView.automaticDimension
         // pathは、Plistからとってきています
-        let path = Bundle.main.path(forResource: "PropertyList", ofType:"plist")
+        guard let path = Bundle.main.path(forResource: "PropertyList", ofType:"plist") else{
+            fatalError("plisterror")
+        }
         //itemsは、plistからとってきたpathのうち、arrayです
-        items = NSArray(contentsOfFile:path!)as! [[String:String]]
+        items = NSArray(contentsOfFile:path)as! [[String:String]]
         
     }
     
     //numberofrowinsectionの数は、dicの数にしたい
+    
+}
+
+extension ViewController : UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! JojoInfoCell
         
-        let imgName = items[indexPath.row]["name"]
-        cell.label.text = items[indexPath.row]["name"]
-        cell.label2.text = items[indexPath.row]["note"]
-        cell.img.image = UIImage(named: imgName as! String)
+        guard let imgName = items[indexPath.row]["name"] else {
+            fatalError("imgNameerror")
+        }
+        cell.nameLabel.text = items[indexPath.row]["name"]
+        cell.noteLabel.text = items[indexPath.row]["note"]
+        cell.img.image = UIImage(named: imgName)
         
         return cell
     }
     
     
-    
-    
-    
-    
-    // Do any additional setup after loading the view.
 }
-
-
-
