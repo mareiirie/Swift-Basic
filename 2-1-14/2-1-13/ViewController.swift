@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource,
-UICollectionViewDelegate {
+class ViewController: UIViewController {
     
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -31,6 +30,28 @@ UICollectionViewDelegate {
         collectionView.register(UINib(nibName: "CustomCell", bundle: nil), forCellWithReuseIdentifier: "CustomCell")
         
     }
+    
+    
+    
+}
+// MARK:- UICollectionViewDelegate
+extension ViewController: UICollectionViewDelegate {
+    //reusableviewに値を渡すメソッド
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        var reusableView = UICollectionReusableView()
+        if kind == UICollectionView.elementKindSectionHeader {
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderView", for: indexPath)
+            if let label = headerView.viewWithTag(3) as? UILabel {
+                label.text = sectionTitle[indexPath.section]
+            }
+            reusableView = headerView
+        }
+        return reusableView
+    }
+}
+
+// MARK:- UICollectionViewDataSource
+extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
@@ -65,8 +86,10 @@ UICollectionViewDelegate {
         //            print("section error")
         //        }
         //Enum（列挙型）のEnumCellを、セクションの番号（indexPath）で取り出す
-        let enumCell = EnumCell(rawValue: indexPath.section)
-        switch (enumCell)! {
+        guard let enumCell = EnumCell(rawValue: indexPath.section) else {
+            fatalError("enumCellerror")
+        }
+        switch enumCell {
         case .firstCell:
             let cellImage1 = UIImage(named: photos1[indexPath.row])
             cell.imageView.image = cellImage1
@@ -79,8 +102,7 @@ UICollectionViewDelegate {
             let cellImage3 = UIImage(named: photos3[indexPath.row])
             cell.imageView.image = cellImage3
             cell.label.text = photos3[indexPath.row]
-        default:
-            print("section error")
+            
             
         }
         
@@ -106,18 +128,6 @@ UICollectionViewDelegate {
         default:
             return 0
         }
-    }
-    //reusableviewに値を渡すメソッド
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        var reusableView = UICollectionReusableView()
-        if kind == UICollectionView.elementKindSectionHeader {
-            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderView", for: indexPath)
-            if let label = headerView.viewWithTag(3) as? UILabel {
-                label.text = sectionTitle[indexPath.section]
-            }
-            reusableView = headerView
-        }
-        return reusableView
     }
     
 }
