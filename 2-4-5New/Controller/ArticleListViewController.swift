@@ -21,7 +21,7 @@ class ArticleListViewController: UIViewController {
     var descripttext = ""
     let sectionTitle = ["天気情報","概要"]
     enum Section: Int {
-        case CustomCell = 0
+        case CustomCell
         case DescriptionCell
     }
     
