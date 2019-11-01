@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>ジョルノジョバーナ</string>
+		<key>note</key>
+		<string>主人公。スタンドはゴールデンエクスペリエンスで、触れたものに生命を宿す能力を持つ。</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ミスタ</string>
+		<key>note</key>
+		<string>チームブチャラティのメンバー。セックスピストルズというスタンドで、あらゆる角度でも敵を正確に狙撃する。</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ブチャラティ</string>
+		<key>note</key>
+		<string>パッショーネの幹部。人望と戦闘力を兼ね備えている。スタンドはスティッキーフィンガー。</string>
+	</dict>
+</array>
+</plist>
